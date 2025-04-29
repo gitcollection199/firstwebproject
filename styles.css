@@ -1,0 +1,582 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: .5rem;
+}
+
+nav {
+    background-color: #f4f4f4;
+    padding: 0.02rem;
+    margin-bottom: 0rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 0.8rem;
+    line-height: 1;
+}
+
+main {
+    padding: 0.1rem;
+    text-align: center;
+}
+
+h2 {
+    margin: 0rem;
+    font-size: 1.2rem;
+}
+
+h3 {
+    margin: 1px;
+    font-size: 1.2rem;
+}
+
+ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.book-image {
+    border: 3px solid #333;
+    padding: 0.5rem 1rem;
+    margin: 1px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.pdf-btn {
+    position: static;
+    padding: 0.2rem 0.8rem;
+    font-size: 0.8rem;
+    margin: 0;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.button-group {
+    display: inline-block;
+    gap: 0.1rem;
+    margin: 1px; /* Added to ensure spacing below header */
+}
+
+/* Image block styles */
+.image-block {
+    text-align: center;
+    margin: 0.1rem 0;
+}
+
+.basecamp-image {
+    max-width: 94%;
+    height: auto;
+    border: 3px solid #333;
+    border-radius: 5px;
+    padding: 0.5rem;
+    background-color: #fff;
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.8rem;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+    border-radius: 5px;
+}
+
+.dropbtn:hover {
+    background-color: #0056b3;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f4f4f4;
+    min-width: 200px;
+    z-index: 1;
+    border: 1px solid #333;
+}
+
+.dropdown-content a {
+    color: #333;
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: block;
+    line-height: 1;
+}
+
+.dropdown-content a:hover {
+    background-color: #e0e0e0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Fix My Local School Section */
+.school-content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 1rem auto;
+    font-size: 0; /* Remove inline-block spacing */
+    box-sizing: border-box;
+}
+
+.school-image {
+    display: inline-block;
+    width: 20%;
+    padding-right: 0.5rem;
+    box-sizing: border-box;
+    font-size: 1rem; /* Reset font-size */
+    vertical-align: top; /* Align tops */
+}
+
+.content-image {
+    display: inline-block;
+    width: 32%;
+    height: auto;
+    border: 3px solid #333;
+    border-radius: 5px;
+    padding: 0.5rem;
+    background-color: #fff;
+    box-sizing: border-box;
+    vertical-align: top; /* Align tops */
+}
+
+.school-text {
+    width: 100%;
+    padding-left: 0.5rem;
+    box-sizing: border-box;
+    font-size: .5rem; /* Reset font-size */
+    vertical-align: top; /* Align tops */
+    text-align: left;
+}
+
+.school-text ul {
+    margin: 0;
+    font-size: .3rem;
+    line-height: 1;
+    list-style-type: disc;
+    width: 90%;
+}
+
+.resource-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 0.5rem;
+    border: 1px solid #333; /* Outer table border */
+}
+
+.resource-table th,
+.resource-table td {
+    padding: 0.5rem;
+    text-align: left;
+    border: 1px solid #333; /* Cell borders */
+}
+
+.resource-table th {
+    background-color: #e0e0e0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.resource-table td {
+    vertical-align: middle;
+}
+
+.resource-table .pdf-btn {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.2rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.resource-table .pdf-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Union Contribution Table */
+.union-contribution-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 1rem 0;
+    border-collapse: collapse;
+    font-size: 0.6rem;
+    border: 1px solid #006064;
+}
+
+.union-contribution-table th,
+.union-contribution-table td {
+    padding: 0.4rem;
+    text-align: left;
+    border: 1px solid #006064;
+    background-color: #e0f2f1;
+}
+
+.union-contribution-table th {
+    background-color: #b2dfdb;
+    font-weight: bold;
+}
+
+/* Mobile Styles for Union Contribution Table */
+@media (max-width: 768px) {
+    .union-contribution-table {
+        font-size: 0.75rem;
+    }
+
+    .union-contribution-table th,
+    .union-contribution-table td {
+        padding: 0.2rem;
+    }
+}
+
+/* Political Spending Table */
+.political-spending-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 1rem 0;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    border: 1px solid #8b0000;
+}
+
+.political-spending-table th,
+.political-spending-table td {
+    padding: 0.45rem;
+    text-align: left;
+    border: 1px solid #8b0000;
+    background-color: #ffebee;
+}
+
+.political-spending-table th {
+    background-color: #ffcdd2;
+    font-weight: bold;
+}
+
+/* Mobile Styles for Political Spending Table */
+@media (max-width: 768px) {
+    .political-spending-table {
+        font-size: 0.8rem;
+    }
+
+    .political-spending-table th,
+    .political-spending-table td {
+        padding: 0.25rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .school-content {
+        font-size: 1rem; /* Reset font-size */
+    }
+
+    .school-image,
+    .school-text {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+
+    .school-text {
+        text-align: left;
+    }
+
+    .school-text ul {
+        padding-left: 1rem;
+    }
+
+    .resource-table {
+        font-size: 0.5rem;
+    }
+
+    .resource-table th,
+    .resource-table td {
+        padding: 0.3rem;
+        border: 1px solid #333;
+    }
+}
+
+/* Scorecard Table */
+#scorecard-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 5px;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+}
+
+#scorecard-table th,
+#scorecard-table td {
+    padding: 0.1rem;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+#scorecard-table th {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
+
+/* Booklist Table */
+#booklist-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    border: 1px solid #333;
+}
+
+#booklist-table th,
+#booklist-table td {
+    padding: 0.1rem;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+#booklist-table th {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
+
+#booklist-table img {
+    max-width: 30px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#booklist-table td a { /* Increased specificity */
+    color: #007BFF !important; /* Ensure color applies */
+    text-decoration: underline !important;
+    font-weight: bold;
+    cursor: pointer; /* Indicate clickable */
+}
+
+#booklist-table td a:hover {
+    color: #0056b3 !important;
+    text-decoration: none !important;
+}
+
+/* Scorecard Header for Federal Scorecard Title and Dropdown */
+.scorecard-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+}
+
+/* Waste Slide Deck Styles */
+.waste-slide-deck-container {
+    text-align: center;
+    padding: 0;
+}
+
+.waste-top-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 1px;
+}
+
+#waste-topic-select {
+    padding: 1px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.waste-slide-window-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px; /* Adjusted for better spacing */
+}
+
+.waste-slide-window {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+
+#waste-slide-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.waste-nav-btn, .waste-slidepdf-btn {
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    width: 15px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.waste-nav-btn:hover, .waste-slidepdf-btn:hover {
+    background-color: #0056b3;
+}
+
+.waste-prev-btn, .waste-next-btn {
+    flex-shrink: 0;
+}
+
+.waste-slidepdf-btn {
+    padding: 10px;
+    font-size: 16px;
+    width: auto;
+    height: 20px;
+}
+
+.waste-btn-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Space between stacked buttons */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flashcard Slide Deck Styles */
+.flashcard-slide-deck-container {
+    text-align: center;
+    padding: 0;
+}
+
+.flashcard-top-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 1px;
+}
+
+#flashcard-topic-select {
+    padding: 1px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.flashcard-slide-window-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.flashcard-slide-window {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+
+#flashcard-slide-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.flashcard-nav-btn, .flashcard-slidepdf-btn {
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flashcard-nav-btn:hover, .flashcard-slidepdf-btn:hover {
+    background-color: #0056b3;
+}
+
+.flashcard-prev-btn, .flashcard-next-btn {
+    flex-shrink: 0;
+}
+
+.flashcard-slidepdf-btn {
+    padding: 1px 20px;
+    font-size: 12px;
+    width: auto;
+    height: 20px;
+}
+
+.flashcard-btn-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards - My Personal Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>How to Make Liberal Tears - Flashcards</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Base Camp</a></li>
+            <li><a href="flashcards.html">Flashcards</a></li>
+            <li><a href="waste.html">Waste</a></li>
+            <li><a href="scorecard.html">Scorecard</a></li>
+            <li><a href="books.html">Books</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="flashcard-slide-deck-container">
+            <div class="flashcard-top-controls">
+                <select id="flashcard-topic-select" onchange="flashcardChangeTopic()">
+                    <option value="" disabled selected>Select a Topic</option>
+                    <option value="first_amendment">1st Amendment</option>
+                    <option value="second_amendment">2nd Amendment</option>
+                    <option value="d_e_i">DEI</option>
+                    <option value="h_one_b_visa">H1B Visa Fraud</option>
+                    <option value="law_fare">Lawfare</option>
+                    <option value="de_banking">De-Banking</option>
+                    <option value="gender_ideology">Gender Ideology</option>
+                    <option value="j_six">J6</option>
+                    <option value="invasion_im">Coordinated Invasion</option>
+                    <option value="co_vid">Covid-19</option>
+                </select>
+                <button class="flashcard-slidepdf-btn" onclick="window.open('./basecamppdf/bodyoflies.pdf', '_blank')">Open Flashcard PDF</button>
+            </div>
+            <div class="flashcard-slide-window-container">
+                <div class="flashcard-btn-stack">
+                    <button class="flashcard-nav-btn flashcard-prev-btn" onclick="flashcardPrevSlide()" aria-label="Previous flashcard slide"><</button>
+                    <button class="flashcard-nav-btn flashcard-next-btn" onclick="flashcardNextSlide()" aria-label="Next flashcard slide">></button>
+                </div>
+                <div class="flashcard-slide-window">
+                    <img id="flashcard-slide-image" src="./images/bodyoflies.JPG" alt="Flashcard Slide">
+                </div>
+                <div class="flashcard-btn-stack">
+                    <button class="flashcard-nav-btn flashcard-prev-btn" onclick="flashcardPrevSlide()" aria-label="Previous flashcard slide"><</button>
+                    <button class="flashcard-nav-btn flashcard-next-btn" onclick="flashcardNextSlide()" aria-label="Next flashcard slide">></button>
+                </div>
+            </div>
+        </div>
+        <p style="font-size: .1rem;">
+            Copyright © 2025 - All Rights Reserved. How to Make Liberal Tears.
+      </p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
